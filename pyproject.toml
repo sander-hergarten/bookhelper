@@ -1,0 +1,32 @@
+[project]
+name = "bookhelper"
+version = "0.1.0"
+description = "Add your description here"
+authors = [
+    { name = "sander-hergarten", email = "mail@sander-hergarten.de" }
+]
+dependencies = [
+    "langchain>=0.3.13",
+    "unstructured[md]>=0.16.11",
+    "nltk>=3.9.1",
+    "sentence-transformers>=3.3.1",
+    "langchain-core>=0.3.28",
+    "langchain-community>=0.3.13",
+    "promptify>=2.0.3",
+]
+readme = "README.md"
+requires-python = ">= 3.8"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = []
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/bookhelper"]
